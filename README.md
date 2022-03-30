@@ -1,6 +1,12 @@
 # ExpressJS-Blog-App
 Learned Express JS by doing this guided project from The Net Ninja. This is a blog app that delivers server-side rendered pages.
 
+# Technologies Used
+  - NodeJS/ExpressJS
+  - EJS
+  - CSS
+  - MongoDB/Mongoose Library
+
 ## Functionalities:
   - List All Blogs
   - Create a Blog
