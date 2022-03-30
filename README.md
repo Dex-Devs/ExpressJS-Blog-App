@@ -11,4 +11,7 @@ Learned Express JS by doing this guided project from The Net Ninja. This is a bl
 ![index page](/assets/screenshots/index.png)
 ![index page](/assets/screenshots/about.png)
 ![index page](/assets/screenshots/create.png)
+![index page](/assets/screenshots/blog_details.png)
+
+
 
