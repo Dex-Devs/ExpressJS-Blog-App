@@ -1,0 +1,72 @@
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/nav.ejs') %> 
+
+    <div class="details content">
+        <h2 class='info-heading'><%= blog.title%></h2>
+        <p class="delete-info" style="color:green;">Deleting this blog...</p>
+        <div class="content-body">
+            <p><%= blog.body%></p>
+        </div>
+        
+        <div class="delete-btn">
+            <a class="delete" data-doc="<%= blog._id%>">
+                <img src="/images/trash.svg" alt="delete icon" title="Delete Blog">
+            </a>
+            <span></span>
+        </div>
+    </div>
+
+    <%- include('./partials/footer.ejs') %> 
+    <script>
+    
+        const trash = document.querySelector('a.delete');
+        const showDelInfo = document.querySelector('p.delete-info');
+        showDelInfo.classList.add('delete-hide');
+        display = () => {
+            return new Promise( (resolve, reject) => {
+                setTimeout(() => {
+                    showDelInfo.classList.remove('delete-hide');
+                    resolve('done');
+                },500);
+                
+            })
+        }
+
+        trash.addEventListener('click', (e) => {
+            const endpoint = `/blogs/${trash.dataset.doc}`;
+
+            // once you make http request from the client side, you should redirect from the client side
+
+            // delete request with fetch
+            fetch(endpoint, {
+                method: 'DELETE'
+            })
+            .then((response) => {
+                /* parse into js object bec response from server is a JSON data */
+                return response.json(); // another promise
+            })
+            .then(data => { // fetch resolved response
+                display()
+                    .then(result => {
+                        if(result === 'done') {
+                            setTimeout(() => {
+                                window.location. href = data.redirect;
+                            },1500)
+                        }
+                    })
+                    .catch(err => {
+                        console.log("eRROR bai");
+                    })
+                // redirect
+            })
+            .catch(err => { throw err });
+        })
+
+        
+
+        
+    </script>
+</body>
+</html>

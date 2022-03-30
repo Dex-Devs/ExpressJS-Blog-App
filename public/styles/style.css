@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+body{
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    font-family: 'Noto Serif', serif;
+    max-width: 1200px;
+}
+p, h1, h2, h3, a, ul{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: #222;
+}
+/* nav & footer styles */
+nav{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    text-transform: uppercase;
+}
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+nav li{
+    list-style-type: none;
+    margin-left: 20px;
+}
+nav h1{
+    font-size: 3em;
+}
+nav p, nav a{
+    color: #777;
+    font-weight: 300;
+}
+footer{
+    color: #777;
+    text-align: center;
+    margin: 80px auto 20px;
+}
+h2{
+    margin-bottom: 40px;
+}
+h3{
+    text-transform: capitalize;
+    margin-bottom: 8px;
+}
+
+nav .site-title a h1:hover {
+    color: crimson;
+}
+.content{
+    margin-left: 20px;
+    padding: 20px;
+    box-shadow: 3px 3px 10px 2px gray;
+}
+
+.content-body {
+    text-indent: 25px;
+}
+
+.blogs .blog-info {
+    border-left: 8px solid rgb(212, 67, 96);
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    padding: 8px;
+    padding-left: 24px;
+    border-bottom: 1px solid rgb(196, 196, 196);
+    transition: transform .1s ease-in;
+}
+
+.blogs .blog-info:hover {
+    /* background-color: rgb(219, 219, 219); */
+    background-color: hsl(0, 0%, 98%);
+    position: relative;
+    transform: scale(1.01);
+    box-shadow: 0 5px 8px 2px gray;
+    overflow: hidden;
+}
+
+.blogs .content-head { 
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-start;
+}
+
+.blogs .content-head a {
+    color: white;
+}
+
+.blogs button {
+    padding: 12px 24px;
+    background-color: rgb(69, 69, 255);
+    border-radius: 10px;
+    border: 0;
+    cursor: pointer;
+    color: white;
+    font-size: 1em;
+}
+
+
+.blogs button:hover {
+    background: hsl(240, 100%, 62%);
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px whitesmoke;
+}
+
+/* index styles */
+.content h2 {
+    border-bottom: 1px solid rgb(212, 67, 96);
+    display: inline-block;
+    padding: 8px 12px;
+}
+
+/* details styles */
+.delete-hide {
+    display: none;
+}
+.details {
+    position: relative;
+}
+
+.details .info-heading {
+    border-bottom: none;
+    border-left: 5px solid rgb(212, 67, 96);
+}
+.details-info {
+    background-color: blue;
+}
+
+.delete-info {
+    background-color: rgb(233, 233, 233);
+    padding: 6px 12px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.details .delete-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.details .delete-btn:hover {
+    cursor: pointer;
+}
+
+.details .delete-btn span {
+    display: block;
+    height: 1.5px;
+    background-color: gray;
+    width: 0;
+    transition: width .2s ease-out;
+}
+
+.details .delete-btn:hover span{
+    width: 100%;
+}
+
+.about p {
+    text-indent: 25px; 
+}
+/* create styles */
+.create-blog form{
+    max-width: 400px;
+    margin: 0 auto;
+}
+.create-blog input,
+.create-blog textarea{
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 8px;
+}
+.create-blog label{
+    display: block;
+    margin-top: 24px;
+}
+textarea{
+    height: 120px;
+}
+.create-blog button{
+    margin-top: 20px;
+    background: crimson;
+    color: white;
+    /* padding: 6px 10px; */
+    border: 0;
+    border-radius: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: box-shadow linear;
+    padding: 12px 24px;
+    background-color: rgb(69, 69, 255);
+}
+
+.create-blog button:hover {
+    background: hsl(240, 100%, 62%);
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px whitesmoke;
+}
