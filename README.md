@@ -1,12 +1,12 @@
 # ExpressJS-Blog-App
 Learned Express JS by doing this guided project from The Net Ninja. This is a blog app that delivers server-side rendered pages.
 
-##Functionalities:
+## Functionalities:
   - List All Blogs
   - Create a Blog
   - Delete a Blog
 
-##Screenshots:
+## Screenshots:
 
 ![index page](/assets/screenshots/index.png)
 ![index page](/assets/screenshots/about.png)
