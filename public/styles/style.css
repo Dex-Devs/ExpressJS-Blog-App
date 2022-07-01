@@ -37,6 +37,10 @@ nav p, nav a{
     color: #777;
     font-weight: 300;
 }
+
+ul li a.active {
+    color: black;
+}
 footer{
     color: #777;
     text-align: center;

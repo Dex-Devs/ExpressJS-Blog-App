@@ -26,6 +26,7 @@ mongoose.connect(process.env.MONGODB_URI, {useNewUrlParser: true, useUnifiedTopo
         app.listen(PORT, () => console.log("Server is listening to port ", PORT) )
     })
     .catch(err => {
+        console.log(err)
         console.log("There's a problem connecting to the database.");
     })
 
